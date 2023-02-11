@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddCourseActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/addCourseHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25sp"
+            android:fontFamily="@font/google_sans_display_regular"
+            android:text="Select year and semester"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <Spinner
+            android:id="@+id/spinnerYear"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/yearHeader"
+            android:layout_marginStart="25sp"
+            android:layout_marginTop="25sp" />
+
+        <TextView
+            android:id="@+id/yearHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addCourseHeader"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="30sp"
+            android:fontFamily="@font/google_sans_display_regular"
+            android:text="Year :"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/semHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addCourseHeader"
+            android:layout_marginLeft="145dp"
+            android:layout_marginTop="32dp"
+            android:layout_toRightOf="@id/yearHeader"
+            android:fontFamily="@font/google_sans_display_regular"
+            android:text="Semester :"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/spinnerSem"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/semHeader"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="25sp"
+            android:layout_toRightOf="@id/spinnerYear" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/addCourseCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="120dp"
+        android:ems="10"
+        android:fontFamily="@font/google_sans_display_regular"
+        android:hint="Course code"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+    <EditText
+        android:id="@+id/addCourseTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="50sp"
+        android:ems="10"
+        android:fontFamily="@font/google_sans_display_regular"
+        android:hint="Course Title"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCourseCode" />
+
+    <Spinner
+        android:id="@+id/creditSpinner"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="60sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCourseTitle" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/google_sans_display_regular"
+        android:text="Add course details"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/button_solid"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

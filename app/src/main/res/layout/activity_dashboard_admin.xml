@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardAdminActivity">
+
+    <TextView
+        android:id="@+id/homeHeaderAdmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/google_sans_display_regular"
+        android:text="Welcome!"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/row1"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="190dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addTimetableCard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background">
+
+                <TextView
+                    android:id="@+id/addTimetable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageTimetable"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/google_sans_display_regular"
+                    android:text="Add Timetable"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/imageTimetable"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/ic_baseline_table_chart_24" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/addCourseCard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background">
+
+                <ImageView
+                    android:id="@+id/imageCourse"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/ic_baseline_menu_book_24" />
+
+                <TextView
+                    android:id="@+id/addCourse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageCourse"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/google_sans_display_regular"
+                    android:text="Add Course"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

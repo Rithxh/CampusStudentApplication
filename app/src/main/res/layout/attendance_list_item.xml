@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/courseCodeAttendance"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="TextView"
+        android:fontFamily="@font/google_sans_display_regular"
+        />
+
+    <TextView
+        android:id="@+id/attended"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/eligible"
+        android:layout_width="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:text="TextView" />
+</LinearLayout>

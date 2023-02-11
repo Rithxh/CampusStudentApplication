@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardUserActivity">
+
+    <TextView
+        android:id="@+id/homeHeaderUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/google_sans_display_regular"
+        android:text="Welcome!"
+        android:textColor="@color/black"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/row1User"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="190dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/timetableCard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background">
+
+                <TextView
+                    android:id="@+id/timetable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageTimetable"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/google_sans_display_regular"
+                    android:text="Timetable"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/imageTimetable"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/ic_baseline_table_chart_24" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profileCard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background">
+
+                <ImageView
+                    android:id="@+id/imageProfile"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/ic_baseline_person_24" />
+
+                <TextView
+                    android:id="@+id/profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageProfile"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/google_sans_display_regular"
+                    android:text="Profile"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row1User">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/attendanceCard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background">
+
+                <TextView
+                    android:id="@+id/attendance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageAttendance"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/google_sans_display_regular"
+                    android:text="Attendance"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/imageAttendance"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/ic_baseline_checklist_rtl_24" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/marksCard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background">
+
+                <ImageView
+                    android:id="@+id/imageMarks"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@drawable/ic_baseline_percent_24" />
+
+                <TextView
+                    android:id="@+id/marksheet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageMarks"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/google_sans_display_regular"
+                    android:text="Marksheet"
+                    android:textColor="@color/black"
+                    android:textSize="24sp" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
