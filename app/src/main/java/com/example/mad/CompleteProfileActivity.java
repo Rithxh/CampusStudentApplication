@@ -48,11 +48,11 @@ public class CompleteProfileActivity extends AppCompatActivity {
 
                     HashMap<String,Object> courseDetails=new HashMap<>();
                     HashMap<String,Object> hashMap=new HashMap<>();
-                    hashMap.put("CIE1","");
-                    hashMap.put("CIE2","");
-                    hashMap.put("CIE3","");
-                    hashMap.put("Attended","");
-                    hashMap.put("Total","");
+                    hashMap.put("CIE1","0");
+                    hashMap.put("CIE2","0");
+                    hashMap.put("CIE3","0");
+                    hashMap.put("Attended","0");
+                    hashMap.put("Total","0");
 
                     DatabaseReference reference1= FirebaseDatabase.getInstance().getReference("Course");
                     reference1.child(year).child(sem)
